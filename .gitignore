@@ -189,6 +189,9 @@ PublishScripts/
 *.nuget.props
 *.nuget.targets
 
+# NuGet Packages exception for use with NTBS service
+!dist/*.nupkg
+
 # Microsoft Azure Build Output
 csx/
 *.build.csdef
