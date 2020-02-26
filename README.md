@@ -1,33 +1,11 @@
 # frontend-dotnetcore
-Razor Tag Helper Library for the NHS.UK Front End Library.
+Forked Razor Tag Helper Library for the NHS.UK Front End Library, to be used by NTBS Service.
 
 https://dotnetcorefelpoc.azurewebsites.net/
 
- ## How to install NHS.UK frontend
-
-### 1. Install with package managers
-
-We recommend that you install NHS.UK frontend using [node package manager (npm)](https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-with-npm.md).
-
-### 2. Install by using compiled files
-
-You can also install NHS.UK frontend using our [compiled files](https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-compiled.md), if you are not currently using a package manager.
-
-### 3. Install the Razor Tag Helper Nuget Package
-
-You can install the [Razor Tag Helper Library](https://www.nuget.org/packages/NHSUK.FrontEndLibrary.TagHelpers) via Nuget Package Manager.
-
-
-## Browsers and assistive technology
-
-Visit our support for [browsers and assistive technology](https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/contributing/browser-support.md), for details on operating systems and software.
-
-
-## Contribute
-
-Read our [contributing guidelines](https://github.com/nhsuk/nhsuk-frontend/blob/master/CONTRIBUTING.md) to contribute to NHS.UK frontend.
-
-
+## What is the purpose of this fork?
+ 
+This fork is intended to be consumed by https://github.com/PublicHealthEngland/ntbs_Beta. It is intended to allow local modifications of the source repository without going through the process of getting changes merged into master.
 
 ## Licence
 

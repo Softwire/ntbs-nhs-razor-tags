@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Nneka Okpaluba, Nigel Atwell</Authors>
     <Company>NHS Digital</Company>
-    <Description>A cross-platform base package of Razor Tag Helper for Dotnet Core. To be used in conjunction with the NHS.UK Front End Library.</Description>
+    <Description>Fork of NHSUK FrontEnd Library. A cross-platform base package of Razor Tag Helper for Dotnet Core. To be used in conjunction with the NHS.UK Front End Library.</Description>
     <Copyright>NHS Digital</Copyright>
     <PackageTags>nhs-uk nhs-digital nhsuk-frontend taghelpers</PackageTags>
     <PackageReleaseNotes>A cross-platform base package of Razor Tag Helper for Dotnet Core. To be used in conjunction with the NHS.UK Front End Library.</PackageReleaseNotes>
@@ -13,7 +13,7 @@
     <PackageId>NHSUK.FrontEndLibrary.TagHelpers-fork</PackageId>
     <Product>NHSUK FrontEnd Library TagHelpers</Product>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <RepositoryUrl>https://github.com/nhsuk/frontend-dotnetcore</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Softwire/frontend-dotnetcore</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/nhsuk/frontend-dotnetcore</PackageLicenseUrl>
   </PropertyGroup>
   <Target Name="CopyPackage" AfterTargets="Pack">
