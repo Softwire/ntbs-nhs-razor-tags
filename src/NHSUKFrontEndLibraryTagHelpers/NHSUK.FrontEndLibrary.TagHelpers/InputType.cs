@@ -5,6 +5,7 @@
     Standard,
     Checkboxes,
     Radios,
-    Date
+    Date,
+    Number
   }
 }

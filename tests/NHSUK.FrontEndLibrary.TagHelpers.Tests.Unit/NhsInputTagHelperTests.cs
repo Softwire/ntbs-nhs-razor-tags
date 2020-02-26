@@ -64,6 +64,14 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     }
 
     [Fact]
+    public void Process_Should_Set_Number_Input_Type_ClassAttribute()
+    {
+        _tagHelper.InputType = InputType.Number;
+        _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
+        Assert.Equal(CssClasses.NhsUkInput, _tagHelperOutput.Attributes[HtmlAttributes.ClassAttribute].Value);
+    }
+
+        [Fact]
     public void Process_Should_Set_Date_Input_Type_Pattern()
     {
       _tagHelper.InputType = InputType.Date;
@@ -79,8 +87,15 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
       Assert.Equal(HtmlAttributes.AttributeValues.Number, _tagHelperOutput.Attributes[HtmlAttributes.Type].Value);
     }
 
-
     [Fact]
+    public void Process_Should_Set_Number_Input_Type_Number_type()
+    {
+        _tagHelper.InputType = InputType.Number;
+        _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
+        Assert.Equal(HtmlAttributes.AttributeValues.Number, _tagHelperOutput.Attributes[HtmlAttributes.Type].Value);
+    }
+
+        [Fact]
     public void Process_Should_Set_IsError_ClassAttribute()
     {
       _tagHelper.IsErrorInput = true;
