@@ -38,6 +38,10 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Input
           SetAttribute(output, HtmlAttributes.Type, HtmlAttributes.AttributeValues.Number);
           SetAttribute(output, "pattern", "[0-9]*");
           break;
+        case InputType.Number:
+          ClassesToPrepend.Add(CssClasses.NhsUkInput);
+          SetAttribute(output, HtmlAttributes.Type, HtmlAttributes.AttributeValues.Number);
+          break;
         default:
           ClassesToPrepend.Add(CssClasses.NhsUkInput);
           SetAttribute(output, HtmlAttributes.Type, HtmlAttributes.AttributeValues.Text);
