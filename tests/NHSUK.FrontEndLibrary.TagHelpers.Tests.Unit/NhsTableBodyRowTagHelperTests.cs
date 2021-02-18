@@ -46,6 +46,14 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     }
 
     [Fact]
+    public async Task ProcessAsync_Should_Set_RoleAttribute()
+    {
+      _tagHelperContext.Items["ParentType"] = TagHelperNames.NhsTableBodyRowTag;
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+      Assert.Equal("row", _tagHelperOutput.Attributes["role"].Value);
+    }
+
+    [Fact]
     public async Task ProcessAsync_Should_Set_TagMode()
     {
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);

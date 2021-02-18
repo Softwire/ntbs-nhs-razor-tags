@@ -35,12 +35,6 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Table
                                      "<h3 class=\"nhsuk-table__heading-tab\">{0}</h3>", TitleText));
         output.PostElement.AppendHtml("</div>");
       }
-     
-        output.PreElement.AppendHtml("<div class=\"nhsuk-table-responsive\">");
-        output.PostElement.AppendHtml("</div>");
-      
-
     }
-
   }
 }

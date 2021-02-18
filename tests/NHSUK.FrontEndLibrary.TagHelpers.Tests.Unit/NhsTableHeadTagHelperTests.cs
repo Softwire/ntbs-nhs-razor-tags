@@ -42,7 +42,7 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     public async Task ProcessAsync_Should_Set_PreContent()
     {
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
-      Assert.Equal("<tr class=\"nhsuk-table__row\">", _tagHelperOutput.PreContent.GetContent());
+      Assert.Equal("<tr class=\"nhsuk-table__row\" role=\"row\">", _tagHelperOutput.PreContent.GetContent());
     }
 
     [Fact]
@@ -57,6 +57,13 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     {
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
       Assert.Equal(CssClasses.NhsUkTableHead, _tagHelperOutput.Attributes[HtmlAttributes.ClassAttribute].Value);
+    }
+
+    [Fact]
+    public async Task ProcessAsync_Should_Set_RoleAttribute()
+    {
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+      Assert.Equal("rowgroup", _tagHelperOutput.Attributes["role"].Value);
     }
 
     [Fact]

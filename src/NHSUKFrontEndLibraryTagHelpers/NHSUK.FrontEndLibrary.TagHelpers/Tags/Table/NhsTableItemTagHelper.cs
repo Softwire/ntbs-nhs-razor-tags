@@ -21,6 +21,7 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Table
           output.TagName = HtmlElements.Th;
           SetClassAttribute(output, CssClasses.NhsUkTableHeader);
           SetAttribute(output, "scope", "col");
+          SetAttribute(output, "role", "columnheader");
         }
         else
         {

@@ -13,7 +13,8 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Table
       await base.ProcessAsync(context, output);
       output.TagName = HtmlElements.Tr;
       SetClassAttribute(output, CssClasses.NhsUkTableRow);
-      
+      SetAttribute(output, "role", "row");
+
       output.TagMode = TagMode.StartTagAndEndTag;
 
       context.Items["ParentType"] = TagHelperNames.NhsTableBodyRowTag;
