@@ -4,8 +4,8 @@ using NHSUK.FrontEndLibrary.TagHelpers.Constants;
 
 namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.CareCard
 {
-  [HtmlTargetElement(TagHelperNames.NhsCareCardTag, 
-    Attributes = NhsUkTagHelperAttributes.CareCardType + "," + NhsUkTagHelperAttributes.CareCardHeading)]
+  [HtmlTargetElement(TagHelperNames.NhsCareCardTag,
+    Attributes = NhsUkTagHelperAttributes.CareCardType + "," + NhsUkTagHelperAttributes.HeadingText)]
   public class NhsCareCardTagHelper : NhsBaseTagHelper
   {
     private string _visuallyHiddenText;
@@ -13,7 +13,7 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.CareCard
     [HtmlAttributeName(NhsUkTagHelperAttributes.CareCardType)]
     public CareCardType CareCardType { get; set; }
 
-    [HtmlAttributeName(NhsUkTagHelperAttributes.CareCardHeading)]
+    [HtmlAttributeName(NhsUkTagHelperAttributes.HeadingText)]
     public string CareCardHeading { get; set; }
 
     public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)

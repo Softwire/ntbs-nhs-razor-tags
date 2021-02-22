@@ -17,6 +17,8 @@
     public const string NhsPromoTag = "nhs-promo";
     public const string NhsPromoGroupTag = "nhs-promo-group";
     public const string NhsPanelGroupTag = "nhs-panel-group";
+    public const string NhsCardTag = "nhs-card";
+    public const string NhsCardGroupTag = "nhs-card-group";
     public const string NhsPanelTag = "nhs-panel";
     public const string NhsPaginationTag = "nhs-pagination";
     public const string NhsNavAzTag = "nhs-nav-a-z";

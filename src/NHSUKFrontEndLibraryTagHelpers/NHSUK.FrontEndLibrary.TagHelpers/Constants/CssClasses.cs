@@ -48,6 +48,10 @@
     public const string NhsUkDetails = "nhsuk-details";
     public const string NhsUkExpander = NhsUkDetails + " nhsuk-expander";
 
+    public const string NhsUkCardGroup = NhsUkGridRow + " nhsuk-card-group";
+    public const string NhsUkCard = "nhsuk-card";
+    public const string NhsUkCardClickable = NhsUkCard + " nhsuk-card--clickable";
+
     public const string NhsUkTextArea = "nhsuk-textarea";
     public const string NhsUkTextAreaError = NhsUkTextArea + " nhsuk-textarea--error";
 
