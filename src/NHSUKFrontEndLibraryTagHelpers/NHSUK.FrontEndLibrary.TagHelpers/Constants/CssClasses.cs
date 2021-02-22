@@ -18,15 +18,8 @@
     public const string NhsUkSelect = "nhsuk-select";
     public const string NhsUkSelectError = NhsUkSelect + " nhsuk-select--error";
     public const string NhsUkSkipLink = "nhsuk-skip-link";
-    public const string NhsUkPromo = "nhsuk-promo";
-    public const string NhsUkPromoSmall = NhsUkPromo + " nhsuk-promo--small";
     public const string NhsUkReviewDate = "nhsuk-review-date";
     public const string NhsUkGridRow = "nhsuk-grid-row";
-    public const string NhsUkPromoGroup = NhsUkGridRow + " nhsuk-promo-group";
-    public const string NhsUkPanelGroup = NhsUkGridRow + " nhsuk-panel-group";
-    public const string NhsUkPanel = "nhsuk-panel";
-    public const string NhsUkPanelGrey = NhsUkPanel + " nhsuk-panel--grey";
-    public const string NhsUkPanelLabel = "nhsuk-panel-with-label";
     public const string NhsUkPagination = "nhsuk-pagination";
     public const string NhsUkNavAz = "nhsuk-nav-a-z";
     public const string NhsUkNavAzItem = "nhsuk-nav-a-z__item";

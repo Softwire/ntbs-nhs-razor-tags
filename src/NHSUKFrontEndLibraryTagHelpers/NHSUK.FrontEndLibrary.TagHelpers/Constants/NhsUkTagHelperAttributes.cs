@@ -9,8 +9,6 @@
     public const string SelectType="nhs-select-type";
     public const string LastReview="last-review";
     public const string NextReview="next-review";
-    public const string PromoSize = "nhs-promo-size";
-    public const string PanelType="nhs-panel-type";
     public const string CardType="nhs-card-type";
     public const string PreviousUrl="previous-url";
     public const string NextUrl = "next-url";
