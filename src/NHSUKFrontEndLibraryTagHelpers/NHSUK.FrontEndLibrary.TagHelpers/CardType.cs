@@ -1,9 +1,8 @@
 ﻿namespace NHSUK.FrontEndLibrary.TagHelpers
 {
-  public enum PanelType
+  public enum CardType
   {
     Standard,
-    Grey,
-    WithLabel
+    Clickable
   }
 }

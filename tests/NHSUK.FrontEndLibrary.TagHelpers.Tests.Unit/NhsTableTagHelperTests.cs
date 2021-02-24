@@ -54,7 +54,7 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
       _tagHelper.TitleText = titleText;
       _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
       Assert.Equal("<div class=\"nhsuk-table__panel-with-heading-tab\">" +
-                                 "<h3 class=\"nhsuk-table__heading-tab\">panel heading</h3><div class=\"nhsuk-table-responsive\">",
+                                 "<h3 class=\"nhsuk-table__heading-tab\">panel heading</h3>",
                                  _tagHelperOutput.PreElement.GetContent());
     }
 
@@ -64,28 +64,28 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
       _tagHelper.IsWithPanel = true;
       _tagHelper.TitleText = titleText;
       _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
-      Assert.Equal("</div></div>", _tagHelperOutput.PostElement.GetContent());
-    }
-
-    [Fact]
-    public void Process_Should_Set_NoPanel_PreElement()
-    {
-      _tagHelper.IsWithPanel = false;
-      _tagHelper.TitleText = titleText;
-      _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
-      Assert.Equal("<div class=\"nhsuk-table-responsive\">", _tagHelperOutput.PreElement.GetContent());
-    }
-
-    [Fact]
-    public void Process_Should_Set_NoPanel_PostElement()
-    {
-      _tagHelper.IsWithPanel = false;
-      _tagHelper.TitleText = titleText;
-      _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
       Assert.Equal("</div>", _tagHelperOutput.PostElement.GetContent());
     }
 
- 
+    [Fact]
+    public void Process_Should_Not_Set_NoPanel_PreElement()
+    {
+      _tagHelper.IsWithPanel = false;
+      _tagHelper.TitleText = titleText;
+      _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
+      Assert.Equal("", _tagHelperOutput.PreElement.GetContent());
+    }
+
+    [Fact]
+    public void Process_Should_Not_Set_NoPanel_PostElement()
+    {
+      _tagHelper.IsWithPanel = false;
+      _tagHelper.TitleText = titleText;
+      _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
+      Assert.Equal("", _tagHelperOutput.PostElement.GetContent());
+    }
+
+
     [Fact]
     public void Process_Should_Set_ClassAttribute()
     {

@@ -14,10 +14,8 @@
     public const string NhsSummaryListRowTag="nhs-summary-list-row";
     public const string NhsSummaryListTag="nhs-summary-list";
     public const string NhsReviewDateTag="nhs-review-date";
-    public const string NhsPromoTag = "nhs-promo";
-    public const string NhsPromoGroupTag = "nhs-promo-group";
-    public const string NhsPanelGroupTag = "nhs-panel-group";
-    public const string NhsPanelTag = "nhs-panel";
+    public const string NhsCardTag = "nhs-card";
+    public const string NhsCardGroupTag = "nhs-card-group";
     public const string NhsPaginationTag = "nhs-pagination";
     public const string NhsNavAzTag = "nhs-nav-a-z";
     public const string NhsNavAzItemTag = "nhs-nav-a-z-item";

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using NHSUK.FrontEndLibrary.TagHelpers.Constants;
-using NHSUK.FrontEndLibrary.TagHelpers.Tags.Promo;
+using NHSUK.FrontEndLibrary.TagHelpers.Tags.Card;
 using Xunit;
 
 namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
 {
-  public class NhsPromoGroupTagHelperTests
+  public class NhsCardGroupTagHelperTests
   {
     private readonly TagHelperOutput _tagHelperOutput;
     private readonly TagHelperContext _tagHelperContext;
-    private readonly NhsPromoGroupTagHelper _tagHelper;
+    private readonly NhsCardGroupTagHelper _tagHelper;
 
-    public NhsPromoGroupTagHelperTests()
+    public NhsCardGroupTagHelperTests()
     {
-      _tagHelper = new NhsPromoGroupTagHelper();
+      _tagHelper = new NhsCardGroupTagHelper();
       _tagHelperContext = new TagHelperContext(
         new TagHelperAttributeList(),
         new Dictionary<object, object>(),
@@ -34,13 +34,13 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     [Fact]
     public void Process_Should_Set_TagName()
     {
-      Assert.Equal(HtmlElements.Div, _tagHelperOutput.TagName);
+      Assert.Equal(HtmlElements.Ul, _tagHelperOutput.TagName);
     }
 
     [Fact]
     public void Process_Should_Set_ClassAttribute()
     {
-      Assert.Equal(CssClasses.NhsUkPromoGroup, _tagHelperOutput.Attributes[HtmlAttributes.ClassAttribute].Value);
+      Assert.Equal(CssClasses.NhsUkCardGroup, _tagHelperOutput.Attributes[HtmlAttributes.ClassAttribute].Value);
     }
 
     [Fact]
@@ -56,14 +56,12 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     [InlineData(GridColumnWidth.OneThird)]
     [InlineData(GridColumnWidth.TwoThirds)]
     [InlineData(GridColumnWidth.ThreeQuarters)]
-    public void Process_Should_Set_ParentType_Context(GridColumnWidth width)
+    public async void ProcessAsync_Should_Set_ParentType_Context(GridColumnWidth width)
     {
       _tagHelper.GridColumnWidth = width;
-      _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
 
       Assert.Equal(_tagHelperContext.Items["ParentColumnWidth"], _tagHelper.GridColumnWidth);
     }
-
-
   }
 }

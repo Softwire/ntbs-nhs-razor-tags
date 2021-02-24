@@ -9,8 +9,7 @@
     public const string SelectType="nhs-select-type";
     public const string LastReview="last-review";
     public const string NextReview="next-review";
-    public const string PromoSize = "nhs-promo-size";
-    public const string PanelType="nhs-panel-type";
+    public const string CardType="nhs-card-type";
     public const string PreviousUrl="previous-url";
     public const string NextUrl = "next-url";
     public const string PreviousLinkText = "previous-link-text";
@@ -47,7 +46,7 @@
     public const string LegendSize = "nhs-legend-size";
     public const string IsPageHeading = "is-page-heading";
     public const string CareCardType = "nhs-care-card-type";
-    public const string CareCardHeading = "heading-text";
+    public const string HeadingText = "heading-text";
     public const string HeaderType = "nhs-header-type";
     public const string ServiceHref = "service-href";
     public const string ShowSearch = "show-search";

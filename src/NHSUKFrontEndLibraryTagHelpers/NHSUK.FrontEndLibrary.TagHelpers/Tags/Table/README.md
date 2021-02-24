@@ -13,31 +13,29 @@ Find out more about the table component and when to use it in the [NHS digital s
 #### HTML markup
 
 ```html
-<div class="nhsuk-table-responsive">
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption">Skin symptoms and possible causes</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col">Skin symptoms</th>
-        <th class="nhsuk-table__header" scope="col">Possible cause</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Blisters on lips or around the mouth</td>
-        <td class="nhsuk-table__cell ">cold sores</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Itchy, dry, cracked, sore</td>
-        <td class="nhsuk-table__cell ">eczema</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Itchy blisters</td>
-        <td class="nhsuk-table__cell ">shingles, chickenpox</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">Skin symptoms and possible causes</caption>
+  <thead class="nhsuk-table__head" role="rowgroup">
+    <tr class="nhsuk-table__row" role="row">
+      <th class="nhsuk-table__header" scope="col" role="columnheader">Skin symptoms</th>
+      <th class="nhsuk-table__header" scope="col" role="columnheader">Possible cause</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell">Blisters on lips or around the mouth</td>
+      <td class="nhsuk-table__cell ">cold sores</td>
+    </tr>
+    <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell">Itchy, dry, cracked, sore</td>
+      <td class="nhsuk-table__cell ">eczema</td>
+    </tr>
+    <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell">Itchy blisters</td>
+      <td class="nhsuk-table__cell ">shingles, chickenpox</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 #### Taghelper markup
@@ -76,31 +74,29 @@ Find out more about the table component and when to use it in the [NHS digital s
 ```html
 <div class="nhsuk-table__panel-with-heading-tab">
   <h3 class="nhsuk-table__heading-tab">Conditions similar to impetigo</h3>
-  <div class="nhsuk-table-responsive">
-    <table class="nhsuk-table">
-      <caption class="nhsuk-table__caption">Other possible causes of your symptoms</caption>
-      <thead class="nhsuk-table__head">
-        <tr class="nhsuk-table__row">
-          <th class="nhsuk-table__header" scope="col">Symptoms</th>
-          <th class="nhsuk-table__header" scope="col">Possible cause</th>
-        </tr>
-      </thead>
-      <tbody class="nhsuk-table__body">
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">Blisters on lips or around the mouth</td>
-          <td class="nhsuk-table__cell ">cold sores</td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">Itchy, dry, cracked, sore</td>
-          <td class="nhsuk-table__cell ">eczema</td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">Itchy blisters</td>
-          <td class="nhsuk-table__cell ">shingles, chickenpox</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="nhsuk-table">
+    <caption class="nhsuk-table__caption">Other possible causes of your symptoms</caption>
+    <thead class="nhsuk-table__head" role="rowgroup">
+      <tr class="nhsuk-table__row" role="row">
+        <th class="nhsuk-table__header" scope="col" role="columnheader">Symptoms</th>
+        <th class="nhsuk-table__header" scope="col" role="columnheader">Possible cause</th>
+      </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+      <tr class="nhsuk-table__row" role="row">
+        <td class="nhsuk-table__cell">Blisters on lips or around the mouth</td>
+        <td class="nhsuk-table__cell ">cold sores</td>
+      </tr>
+      <tr class="nhsuk-table__row" role="row">
+        <td class="nhsuk-table__cell">Itchy, dry, cracked, sore</td>
+        <td class="nhsuk-table__cell ">eczema</td>
+      </tr>
+      <tr class="nhsuk-table__row" role="row">
+        <td class="nhsuk-table__cell">Itchy blisters</td>
+        <td class="nhsuk-table__cell ">shingles, chickenpox</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 ```
 

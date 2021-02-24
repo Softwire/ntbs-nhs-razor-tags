@@ -80,6 +80,14 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
       Assert.Equal("col", _tagHelperOutput.Attributes["scope"].Value);
     }
 
+    [Fact]
+    public async Task ProcessAsync_Should_Set_TableHeadItem_RoleAttribute()
+    {
+      _tagHelperContext.Items["ParentType"] = TagHelperNames.NhsTableHeadTag;
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+      Assert.Equal("columnheader", _tagHelperOutput.Attributes["role"].Value);
+    }
+
 
     [Fact]
     public async Task ProcessAsync_Should_Set_TableBodyItem_ClassAttribute()
@@ -90,11 +98,27 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     }
 
     [Fact]
+    public async Task ProcessAsync_Should_Not_Set_TableBodyItem_ScopeAttribute()
+    {
+      _tagHelperContext.Items["ParentType"] = TagHelperNames.NhsTableBodyRowTag;
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+      Assert.Null(_tagHelperOutput.Attributes["scope"]);
+    }
+
+    [Fact]
+    public async Task ProcessAsync_Should_Not_Set_TableBodyItem_RoleAttribute()
+    {
+      _tagHelperContext.Items["ParentType"] = TagHelperNames.NhsTableBodyRowTag;
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+      Assert.Null(_tagHelperOutput.Attributes["role"]);
+    }
+
+
+    [Fact]
     public async Task ProcessAsync_Should_Set_TagMode()
     {
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
       Assert.Equal(TagMode.StartTagAndEndTag, _tagHelperOutput.TagMode);
     }
-
   }
 }

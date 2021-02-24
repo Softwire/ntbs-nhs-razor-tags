@@ -13,8 +13,9 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Table
       await base.ProcessAsync(context, output);
       output.TagName = HtmlElements.Thead;
       SetClassAttribute(output, CssClasses.NhsUkTableHead);
-   
-      output.PreContent.SetHtmlContent("<tr class=\"nhsuk-table__row\">");
+      SetAttribute(output, "role", "rowgroup");
+
+      output.PreContent.SetHtmlContent("<tr class=\"nhsuk-table__row\" role=\"row\">");
       output.PostContent.SetHtmlContent("</tr>");
 
       output.TagMode = TagMode.StartTagAndEndTag;
