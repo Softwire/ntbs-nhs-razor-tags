@@ -9,6 +9,10 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Table
   {
     [HtmlAttributeName(NhsUkTagHelperAttributes.CellIsHeader)]
     public bool CellIsHeader { get; set; }
+
+    [HtmlAttributeName(NhsUkTagHelperAttributes.HeadingText)]
+    public string HeadingText { get; set; }
+
     public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
     {
       await base.ProcessAsync(context, output);
@@ -28,6 +32,11 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Table
           output.TagName = CellIsHeader ? HtmlElements.Th : HtmlElements.Td;
           SetClassAttribute(output, CssClasses.NhsUkTableCell);
         }
+      }
+
+      if (!string.IsNullOrWhiteSpace(HeadingText))
+      {
+        output.PreContent.SetHtmlContent($"<span class=\"nhsuk-table-responsive__heading\">{HeadingText}</span>");
       }
 
       output.Content.SetHtmlContent(content);

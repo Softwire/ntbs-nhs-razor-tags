@@ -88,6 +88,14 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
       Assert.Equal("columnheader", _tagHelperOutput.Attributes["role"].Value);
     }
 
+    [Fact]
+    public async Task ProcessAsync_Should_Set_TableHeadItem_PreContent()
+    {
+        _tagHelperContext.Items["ParentType"] = TagHelperNames.NhsTableHeadTag;
+        _tagHelper.HeadingText = "How much";
+        await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+        Assert.Equal("<span class=\"nhsuk-table-responsive__heading\">How much</span>", _tagHelperOutput.PreContent.GetContent());
+    }
 
     [Fact]
     public async Task ProcessAsync_Should_Set_TableBodyItem_ClassAttribute()
@@ -111,6 +119,15 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
       _tagHelperContext.Items["ParentType"] = TagHelperNames.NhsTableBodyRowTag;
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
       Assert.Null(_tagHelperOutput.Attributes["role"]);
+    }
+
+    [Fact]
+    public async Task ProcessAsync_Should_Set_TableBodyItem_PreContent()
+    {
+      _tagHelperContext.Items["ParentType"] = TagHelperNames.NhsTableBodyRowTag;
+      _tagHelper.HeadingText = "How much";
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+      Assert.Equal("<span class=\"nhsuk-table-responsive__heading\">How much</span>", _tagHelperOutput.PreContent.GetContent());
     }
 
 
