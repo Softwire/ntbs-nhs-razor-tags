@@ -87,10 +87,19 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
 
 
     [Fact]
-    public void Process_Should_Set_ClassAttribute()
+    public void Process_Should_Set_NotResponsive_ClassAttribute()
     {
+      _tagHelper.Responsive = false;
       _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
       Assert.Equal(CssClasses.NhsUkTable, _tagHelperOutput.Attributes[HtmlAttributes.ClassAttribute].Value);
+    }
+
+    [Fact]
+    public void Process_Should_Set_Responsive_ClassAttribute()
+    {
+      _tagHelper.Responsive = true;
+      _tagHelper.Process(_tagHelperContext, _tagHelperOutput);
+      Assert.Equal(CssClasses.NhsUkTableResponsive, _tagHelperOutput.Attributes[HtmlAttributes.ClassAttribute].Value);
     }
 
     [Fact]
