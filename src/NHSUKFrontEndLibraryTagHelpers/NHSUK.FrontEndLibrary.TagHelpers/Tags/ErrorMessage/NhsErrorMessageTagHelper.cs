@@ -20,6 +20,7 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.ErrorMessage
       {
         case SpanType.ErrorMessage:
           ClassesToPrepend.Add(CssClasses.NhsUkErrorMessage);
+          SetAttribute(output, HtmlAttributes.AriaLive, HtmlAttributes.AttributeValues.Assertive);
           break;
         default:
           ClassesToPrepend.Add(CssClasses.NhsUkErrorMessage);

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Html;
@@ -69,6 +69,22 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
       _tagHelper.SpanType = type;
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
       Assert.Equal(CssClasses.NhsUkErrorMessage, _tagHelperOutput.Attributes[HtmlAttributes.ClassAttribute].Value);
+    }
+
+    [Fact]
+    public async void ProcessAsync_Should_Set_AriaLiveAttribute_ForErrorMessage()
+    {
+      _tagHelper.SpanType = SpanType.ErrorMessage;
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+      Assert.Equal(HtmlAttributes.AttributeValues.Assertive, _tagHelperOutput.Attributes[HtmlAttributes.AriaLive].Value);
+    }
+
+    [Fact]
+    public async void ProcessAsync_ShouldNot_Set_AriaLiveAttribute_ForOtherSpanType()
+    {
+      _tagHelper.SpanType = (SpanType)(-1);
+      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
+      Assert.Null(_tagHelperOutput.Attributes[HtmlAttributes.AriaLive]);
     }
   }
 }
