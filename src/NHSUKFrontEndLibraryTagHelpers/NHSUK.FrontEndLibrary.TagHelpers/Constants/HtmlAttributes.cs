@@ -13,6 +13,7 @@
     public const string AriaDisabled = "aria-disabled";
     public const string AriaLabelAttribute = "aria-label";
     public const string AriaLabelByAttribute = "aria-labelledby";
+    public const string AriaLive = "aria-live";
 
     public static class AttributeValues
     {
@@ -34,6 +35,7 @@
       public const string Breadcrumb = "Breadcrumb";
       public const string ContentInfo = "contentinfo";
       public const string Banner = "banner";
+      public const string Assertive = "assertive";
     }
   }
 }
