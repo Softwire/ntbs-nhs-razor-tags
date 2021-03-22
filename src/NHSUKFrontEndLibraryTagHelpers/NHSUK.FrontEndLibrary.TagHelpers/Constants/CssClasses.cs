@@ -19,7 +19,6 @@
     public const string NhsUkSelect = "nhsuk-select";
     public const string NhsUkSelectError = NhsUkSelect + " nhsuk-select--error";
     public const string NhsUkSkipLink = "nhsuk-skip-link";
-    public const string NhsUkReviewDate = "nhsuk-review-date";
     public const string NhsUkGridRow = "nhsuk-grid-row";
     public const string NhsUkPagination = "nhsuk-pagination";
     public const string NhsUkNavAz = "nhsuk-nav-a-z";
@@ -151,7 +150,6 @@
 
     public const string NhsUkFooter = "nhsuk-footer";
     public const string NhsUkFooterList = "nhsuk-footer__list";
-    public const string NhsUkFooterListColumn = NhsUkFooterList + " nhsuk-footer__list--three-columns";
     public const string NhsUkFooterCopyright = "nhsuk-footer__copyright";
 
     public const string NhsUkCheckboxes = "nhsuk-checkboxes";

@@ -55,20 +55,8 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     }
 
     [Fact]
-    public async void ProcessAsync_Should_Set_Content_Is_List_Column()
-    {
-      _tagHelper.IsListColumn = true;
-      await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
-
-      Assert.Equal(string.Format("<div class=\"nhsuk-footer\" id=\"nhsuk-footer\"><div class=\"nhsuk-width-container\"><h2 class=\"nhsuk-u-visually-hidden\">Support links</h2><ul class=\"{0}\"></ul>" +
-                                 "<p class=\"nhsuk-footer__copyright\">&copy; Crown copyright</p></div></div>", CssClasses.NhsUkFooterListColumn),
-        _tagHelperOutput.Content.GetContent());
-    }
-
-    [Fact]
     public async void ProcessAsync_Should_Set_Content()
     {
-      _tagHelper.IsListColumn = false;
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
 
       Assert.Equal(string.Format("<div class=\"nhsuk-footer\" id=\"nhsuk-footer\"><div class=\"nhsuk-width-container\"><h2 class=\"nhsuk-u-visually-hidden\">Support links</h2><ul class=\"{0}\"></ul>" +
