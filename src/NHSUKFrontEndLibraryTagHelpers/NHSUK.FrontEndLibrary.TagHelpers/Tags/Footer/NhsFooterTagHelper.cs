@@ -9,9 +9,6 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Footer
   [RestrictChildren(TagHelperNames.NhsFooterListItemTag)]
   public class NhsFooterTagHelper : NhsBaseTagHelper
   {
-    [HtmlAttributeName(NhsUkTagHelperAttributes.IsListColumns)]
-    public bool IsListColumn { get; set; }
-
     public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
     {
       await base.ProcessAsync(context, output);
@@ -32,7 +29,7 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.Footer
       visuallyHidden.InnerHtml.Append(ContentText.SupportLinks);
 
       var footerList = new TagBuilder(HtmlElements.Ul);
-      footerList.AddCssClass(IsListColumn ? CssClasses.NhsUkFooterListColumn : CssClasses.NhsUkFooterList);
+      footerList.AddCssClass(CssClasses.NhsUkFooterList);
 
       footerList.InnerHtml.AppendHtml(content);
 

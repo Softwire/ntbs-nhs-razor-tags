@@ -150,7 +150,6 @@
 
     public const string NhsUkFooter = "nhsuk-footer";
     public const string NhsUkFooterList = "nhsuk-footer__list";
-    public const string NhsUkFooterListColumn = NhsUkFooterList + " nhsuk-footer__list--three-columns";
     public const string NhsUkFooterCopyright = "nhsuk-footer__copyright";
 
     public const string NhsUkCheckboxes = "nhsuk-checkboxes";
