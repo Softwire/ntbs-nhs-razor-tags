@@ -1,4 +1,4 @@
-# frontend-dotnetcore
+# ntbs-nhs-razor-tags
 Forked Razor Tag Helper Library for the NHS.UK Front End Library, to be used by NTBS Service.
 
 https://dotnetcorefelpoc.azurewebsites.net/
