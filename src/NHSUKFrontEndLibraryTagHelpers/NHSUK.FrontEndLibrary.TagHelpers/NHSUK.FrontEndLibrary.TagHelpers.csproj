@@ -13,7 +13,7 @@
     <PackageId>NHSUK.FrontEndLibrary.TagHelpers-fork</PackageId>
     <Product>NHSUK FrontEnd Library TagHelpers</Product>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <RepositoryUrl>https://github.com/Softwire/frontend-dotnetcore</RepositoryUrl>
+    <RepositoryUrl>https://github.com/publichealthengland/ntbs-nhs-razor-tags</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/nhsuk/frontend-dotnetcore</PackageLicenseUrl>
   </PropertyGroup>
   <Target Name="CopyPackage" AfterTargets="Pack">
