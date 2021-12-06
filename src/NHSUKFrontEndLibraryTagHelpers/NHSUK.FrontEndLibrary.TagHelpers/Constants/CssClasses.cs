@@ -154,9 +154,9 @@
 
     public const string NhsUkCheckboxes = "nhsuk-checkboxes";
 
-    public const string NhsUkCareCardNonUrgent = "nhsuk-care-card nhsuk-care-card--non-urgent";
-    public const string NhsUkCareCardUrgent = "nhsuk-care-card nhsuk-care-card--urgent";
-    public const string NhsUkCareCardImmediate = "nhsuk-care-card nhsuk-care-card--immediate";
+    public const string NhsUkCareCardNonUrgent = "nhsuk-card nhsuk-card--care nhsuk-card--care--non-urgent";
+    public const string NhsUkCareCardUrgent = "nhsuk-card nhsuk-card--care nhsuk-card--care--urgent";
+    public const string NhsUkCareCardImmediate = "nhsuk-card nhsuk-card--care nhsuk-card--care--emergency";
 
     public const string NhsUkWidthContainerHeader = "nhsuk-width-container nhsuk-header__container";
     public const string NhsUkHeaderNavigation = "nhsuk-header__navigation";

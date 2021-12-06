@@ -2,7 +2,7 @@
 
 ## Guidance
 
-Find out more about the care card component and when to use it in the [NHS digital service manual](https://beta.nhs.uk/service-manual/styles-components-patterns/care-cards).
+Find out more about care cards and when to use them in the [NHS digital service manual](https://service-manual.nhs.uk/design-system/components/care-cards).
 
 ## Quick start examples
 
@@ -13,20 +13,22 @@ Find out more about the care card component and when to use it in the [NHS digit
 #### HTML markup
 
 ```html
-<div class="nhsuk-care-card nhsuk-care-card--non-urgent">
-  <div class="nhsuk-care-card__heading-container">
-    <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span></h3>
-    <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
-  </div>
-  <div class="nhsuk-care-card__content">
-    <ul>
-      <li>you're not sure it's chickenpox</li>
-      <li>the skin around the blisters is red, hot or painful (signs of infection)</li>
-      <li>your child is <a href="https://www.nhs.uk/conditions/dehydration">dehydrated</a></li>
-      <li>you're concerned about your child or they get worse</li>
-    </ul>
-    <p>Tell the receptionist you think it's chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
-  </div>
+<div class="nhsuk-card nhsuk-card--care nhsuk-card--care--non-urgent">
+    <div class="nhsuk-card--care__heading-container">
+        <h2 class="nhsuk-card--care__heading">
+            <span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span>
+        </h2>
+        <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
+    </div>
+    <div class="nhsuk-card__content">
+        <ul>
+            <li>you're not sure it's chickenpox</li>
+            <li>the skin around the blisters is red, hot or painful (signs of infection)</li>
+            <li>your child is <a href="">dehydrated</a></li>
+            <li>you're concerned about your child or they get worse</li>
+        </ul>
+        <p>Tell the receptionist you think it's chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+    </div>
 </div>
 ```
 
@@ -53,20 +55,23 @@ Find out more about the care card component and when to use it in the [NHS digit
 #### HTML markup
 
 ```html
-<div class="nhsuk-care-card nhsuk-care-card--urgent">
-  <div class="nhsuk-care-card__heading-container">
-    <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Urgent advice: </span>Ask for an urgent GP appointment if:</span></h3>
-    <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
-  </div>
-  <div class="nhsuk-care-card__content">
-    <ul>
-      <li>you're an adult and have chickenpox</li>
-      <li>you're pregnant and haven't had chickenpox before and you've been near someone with it </li>
-      <li>you have a weakened immune system and you've been near someone with chickenpox</li>
-      <li>you think your newborn baby has chickenpox</li>
-    </ul>
-    <p>In these situations, your GP can prescribe medicine to prevent complications. You need to take it within 24 hours of the spots coming out.</p>
-  </div>
+<div class="nhsuk-card nhsuk-card--care nhsuk-card--care--urgent">
+    <div class="nhsuk-card--care__heading-container">
+        <h2 class="nhsuk-card--care__heading">
+            <span role="text"><span class="nhsuk-u-visually-hidden">Urgent advice: </span>Ask for an urgent GP appointment if:</span>
+        </h2>
+        <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
+    </div>
+    <div class="nhsuk-card__content">
+
+        <ul>
+            <li>you're an adult and have chickenpox</li>
+            <li>you're pregnant and haven't had chickenpox before and you've been near someone with it </li>
+            <li>you have a weakened immune system and you've been near someone with chickenpox</li>
+            <li>you think your newborn baby has chickenpox</li>
+        </ul>
+        <p>In these situations, your GP can prescribe medicine to prevent complications. You need to take it within 24 hours of the spots coming out.</p>
+    </div>
 </div>
 ```
 
@@ -93,19 +98,21 @@ Find out more about the care card component and when to use it in the [NHS digit
 #### HTML markup
 
 ```html
-<div class="nhsuk-care-card nhsuk-care-card--immediate">
-  <div class="nhsuk-care-card__heading-container">
-    <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Immediate action required: </span>Call 999 if you have sudden chest pain that:</span></h3>
-    <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
-  </div>
-  <div class="nhsuk-care-card__content">
-    <ul>
-      <li>spreads to your arms, back, neck or jaw</li>
-      <li>makes your chest feel tight or heavy</li>
-      <li>also started with shortness of breath, sweating and feeling or being sick</li>
-    </ul>
-    <p>You could be having a heart attack. Call 999 immediately as you need immediate treatment in hospital.</p>
-  </div>
+<div class="nhsuk-card nhsuk-card--care nhsuk-card--care--emergency">
+    <div class="nhsuk-card--care__heading-container">
+        <h2 class="nhsuk-card--care__heading">
+            <span role="text"><span class="nhsuk-u-visually-hidden">Immediate action required: </span>Call 999 or go to A&amp;E now if:</span>
+        </h2>
+        <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
+    </div>
+    <div class="nhsuk-card__content">
+        <ul>
+            <li>you or someone you know needs immediate help</li>
+            <li>you have seriously harmed yourself – for example, by taking a drug overdose</li>
+        </ul>
+        <p>A mental health emergency should be taken as seriously as a medical emergency.</p>
+        <p><a href="">Find your nearest A&E</a></p>
+    </div>
 </div>
 ```
 
