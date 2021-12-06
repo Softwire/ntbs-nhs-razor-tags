@@ -33,7 +33,7 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.CareCard
           break;
         case CareCardType.Immediate:
           ClassesToPrepend.Add(CssClasses.NhsUkCareCardImmediate);
-          _visuallyHiddenText = ContentText.CareCardImmediateHiddenText ;
+          _visuallyHiddenText = ContentText.CareCardImmediateHiddenText;
           break;
         default:
           ClassesToPrepend.Add(CssClasses.NhsUkCareCardNonUrgent);
@@ -42,10 +42,10 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tags.CareCard
       }
 
       output.PreContent.SetHtmlContent(
-        string.Format("<div class=\"nhsuk-care-card__heading-container\"><h3 class=\"nhsuk-care-card__heading\">" +
+        string.Format("<div class=\"nhsuk-card--care__heading-container\"><h3 class=\"nhsuk-card--care__heading\">" +
                       "<span role =\"text\"><span class=\"nhsuk-u-visually-hidden\">{0}:</span>{1}:</span></h3>" +
-                      "<span class=\"nhsuk-care-card__arrow\" aria-hidden=\"true\"></span></div>" +
-                      "<div class=\"nhsuk-care-card__content\">", _visuallyHiddenText, CareCardHeading));
+                      "<span class=\"nhsuk-card--care__arrow\" aria-hidden=\"true\"></span></div>" +
+                      "<div class=\"nhsuk-card__content\">", _visuallyHiddenText, CareCardHeading));
 
       var content = (await output.GetChildContentAsync()).GetContent();
       output.Content.SetHtmlContent(content);

@@ -38,10 +38,10 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     {
       _tagHelper.CareCardType = CareCardType.Urgent;
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
-      Assert.Equal(string.Format("<div class=\"nhsuk-care-card__heading-container\"><h3 class=\"nhsuk-care-card__heading\">" +
+      Assert.Equal(string.Format("<div class=\"nhsuk-card--care__heading-container\"><h3 class=\"nhsuk-card--care__heading\">" +
                                  "<span role =\"text\"><span class=\"nhsuk-u-visually-hidden\">{0}:</span>{1}:</span></h3>" +
-                                 "<span class=\"nhsuk-care-card__arrow\" aria-hidden=\"true\"></span></div>" +
-                                 "<div class=\"nhsuk-care-card__content\">", ContentText.CareCardUrgentHiddenText, _tagHelper.CareCardHeading), _tagHelperOutput.PreContent.GetContent());
+                                 "<span class=\"nhsuk-card--care__arrow\" aria-hidden=\"true\"></span></div>" +
+                                 "<div class=\"nhsuk-card__content\">", ContentText.CareCardUrgentHiddenText, _tagHelper.CareCardHeading), _tagHelperOutput.PreContent.GetContent());
     }
 
     [Fact]
@@ -49,10 +49,10 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
     {
       _tagHelper.CareCardType = CareCardType.NonUrgent;
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
-      Assert.Equal(string.Format("<div class=\"nhsuk-care-card__heading-container\"><h3 class=\"nhsuk-care-card__heading\">" +
+      Assert.Equal(string.Format("<div class=\"nhsuk-card--care__heading-container\"><h3 class=\"nhsuk-card--care__heading\">" +
                                  "<span role =\"text\"><span class=\"nhsuk-u-visually-hidden\">{0}:</span>{1}:</span></h3>" +
-                                 "<span class=\"nhsuk-care-card__arrow\" aria-hidden=\"true\"></span></div>" +
-                                 "<div class=\"nhsuk-care-card__content\">", ContentText.CareCardNonUrgentHiddenText, _tagHelper.CareCardHeading), _tagHelperOutput.PreContent.GetContent());
+                                 "<span class=\"nhsuk-card--care__arrow\" aria-hidden=\"true\"></span></div>" +
+                                 "<div class=\"nhsuk-card__content\">", ContentText.CareCardNonUrgentHiddenText, _tagHelper.CareCardHeading), _tagHelperOutput.PreContent.GetContent());
     }
 
     [Fact]
@@ -61,10 +61,10 @@ namespace NHSUK.FrontEndLibrary.TagHelpers.Tests.Unit
       _tagHelper.CareCardType = CareCardType.Immediate;
       _tagHelper.CareCardHeading = "Call 999";
       await _tagHelper.ProcessAsync(_tagHelperContext, _tagHelperOutput);
-      Assert.Equal(string.Format("<div class=\"nhsuk-care-card__heading-container\"><h3 class=\"nhsuk-care-card__heading\">" +
+      Assert.Equal(string.Format("<div class=\"nhsuk-card--care__heading-container\"><h3 class=\"nhsuk-card--care__heading\">" +
                                  "<span role =\"text\"><span class=\"nhsuk-u-visually-hidden\">{0}:</span>{1}:</span></h3>" +
-                                 "<span class=\"nhsuk-care-card__arrow\" aria-hidden=\"true\"></span></div>" +
-                                 "<div class=\"nhsuk-care-card__content\">", ContentText.CareCardImmediateHiddenText, "Call 999"), _tagHelperOutput.PreContent.GetContent());
+                                 "<span class=\"nhsuk-card--care__arrow\" aria-hidden=\"true\"></span></div>" +
+                                 "<div class=\"nhsuk-card__content\">", ContentText.CareCardImmediateHiddenText, "Call 999"), _tagHelperOutput.PreContent.GetContent());
     }
 
     [Fact]
